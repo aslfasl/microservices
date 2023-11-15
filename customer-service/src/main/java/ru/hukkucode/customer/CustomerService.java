@@ -5,7 +5,6 @@ import org.springframework.web.client.RestTemplate;
 import ru.hukkucode.amqp.RabbitMQMessageProducer;
 import ru.hukkucode.clients.fraud.FraudCheckResponse;
 import ru.hukkucode.clients.fraud.FraudClient;
-import ru.hukkucode.clients.notification.NotificationClient;
 import ru.hukkucode.clients.notification.NotificationRequest;
 
 @Service
