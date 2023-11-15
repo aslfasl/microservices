@@ -2,6 +2,7 @@ package ru.hukkucode.customer;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import ru.hukkucode.amqp.RabbitMQMessageProducer;
 import ru.hukkucode.clients.fraud.FraudCheckResponse;
 import ru.hukkucode.clients.fraud.FraudClient;
 import ru.hukkucode.clients.notification.NotificationClient;
@@ -12,7 +13,7 @@ public record CustomerService(
         CustomerRepository customerRepository,
         RestTemplate restTemplate,
         FraudClient fraudClient,
-        NotificationClient notificationClient
+        RabbitMQMessageProducer messageProducer
 ) {
 
     public void registerCustomer(CustomerRegistrationRequest req) {
@@ -29,14 +30,16 @@ public record CustomerService(
         if (response != null && response.isFraudster())
             throw new IllegalStateException("Fraudster!");
 
-        // TODO: 14.10.2023 make async i.e. add to queue
-        notificationClient.saveNotification(
-                new NotificationRequest(
-                        customer.getId(),
-                        customer.getEmail(),
-                        String.format("Hi %s, welcome!", customer.getFirstName())
-                )
+        NotificationRequest notificationRequest = new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                String.format("Hi %s, welcome!", customer.getFirstName())
         );
 
+        messageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
+        );
     }
 }
