@@ -1,6 +1,7 @@
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\Customer.java
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\CustomerController.java
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\CustomerRepository.java
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\CustomerService.java
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\CustomerApp.java
-D:\ITMO\projects\microservices\customer-service\src\main\java\ru\hukkucode\customer\CustomerRegistrationRequest.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerController.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerRepository.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/Customer.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerRegistrationRequest.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerConfig.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerService.java
+/home/oogis/projects/study/microservices/microservices/customer-service/src/main/java/ru/hukkucode/customer/CustomerApp.java
