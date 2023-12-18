@@ -38,3 +38,7 @@ Thumbs.db
 .idea
 target/
 /eureka-server/target/
+/notification-server/target/
+/fraud-service/target/
+/eureka-server/target/
+/customer-service/target/

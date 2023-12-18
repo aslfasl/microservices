@@ -1,8 +1,0 @@
-ru/hukkucode/customer/Customer.class
-ru/hukkucode/customer/CustomerService.class
-ru/hukkucode/customer/CustomerRepository.class
-ru/hukkucode/customer/CustomerConfig.class
-ru/hukkucode/customer/CustomerRegistrationRequest.class
-ru/hukkucode/customer/CustomerController.class
-ru/hukkucode/customer/Customer$CustomerBuilder.class
-ru/hukkucode/customer/CustomerApp.class
